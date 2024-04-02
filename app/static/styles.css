@@ -1,0 +1,18 @@
+/* BODY */
+.body-custom {
+    background-color: #FEFAE0;
+}
+
+/* NAVBAR */
+.navbar-custom {
+    background-color: #765827;
+}
+
+/* BUTTONS */
+.btn-custom {
+    background-color: #FEFAE0;
+}
+
+.btn-custom:hover {
+    background-color: #5F6F52;
+}
