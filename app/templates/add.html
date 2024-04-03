@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Add Cafe{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Add Cafe</h1>
+    <form method="POST" action="{{ url_for('add') }}">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.name.label(class="form-label") }}
+            {{ form.name(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.image_url.label(class="form-label") }}
+            {{ form.image_url(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.map_url.label(class="form-label") }}
+            {{ form.map_url(class="form-control") }}
+        </div>
+        {{ form.submit(class="btn btn-primary") }}
+    </form>
+</div>
+{% endblock %}

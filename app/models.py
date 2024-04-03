@@ -9,7 +9,8 @@ class Cafes(db.Model):
     # Define columns for the 'cafes' table
     cafe_id = db.Column(db.Integer, primary_key=True)  # Primary key column for cafe ID
     name = db.Column(db.String(250), nullable=False)  # Column for cafe name (max length: 250 characters)
-    location = db.Column(db.Text, nullable=False)     # Column for cafe location (text field)
+    location = db.Column(db.String(500), nullable=False)     # Column for cafe location (text field)
+    image = db.Column(db.String(500), nullable=False)
 
     # Define a special method '__repr__' to represent the object as a string
     def __repr__(self):
