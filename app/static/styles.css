@@ -16,3 +16,12 @@
 .btn-custom:hover {
     background-color: #5F6F52;
 }
+
+/* <weight>: Use a value from 300 to 700 */
+
+.comfortaa {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}

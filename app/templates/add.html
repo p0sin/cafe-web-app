@@ -19,6 +19,28 @@
             {{ form.map_url.label(class="form-label") }}
             {{ form.map_url(class="form-control") }}
         </div>
+        <div class="form-group">
+            {{ form.opening_hour.label(class="form-label") }}
+            {{ form.opening_hour(class="form-control") }}
+            {{ form.closing_hour.label(class="form-label") }}
+            {{ form.closing_hour(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.wifi.label(class="form-label") }}
+            {{ form.wifi(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.noise.label(class="form-label") }}
+            {{ form.noise(class="form-control") }}
+        </div>
+        <div class="form-check">
+            {{ form.pet_friendly(class="form-check-input") }}
+            {{ form.pet_friendly.label(class="form-label") }}
+        </div>
+        <div class="form-check">
+            {{ form.electric_outlets(class="form-check-input") }}
+            {{ form.electric_outlets.label(class="form-label") }}
+        </div>
         {{ form.submit(class="btn btn-primary") }}
     </form>
 </div>
