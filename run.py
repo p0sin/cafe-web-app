@@ -7,4 +7,4 @@ flask_app = create_app()
 # Check if this script is being run directly
 if __name__ == '__main__':
     # Run the Flask application in debug mode
-    flask_app.run(debug=True)
+    flask_app.run(host='0.0.0.0', debug=True)

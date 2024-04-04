@@ -11,6 +11,12 @@ class Cafes(db.Model):
     name = db.Column(db.String(250), nullable=False)  # Column for cafe name (max length: 250 characters)
     location = db.Column(db.String(500), nullable=False)     # Column for cafe location (text field)
     image = db.Column(db.String(500), nullable=False)
+    opening_hour = db.Column(db.DateTime, nullable=False)
+    closing_hour = db.Column(db.DateTime, nullable=False)
+    wifi = db.Column(db.String(10))
+    noise = db.Column(db.String(10))
+    pet_friendly = db.Column(db.Boolean)
+    electric_outlets = db.Column(db.Boolean)
 
     # Define a special method '__repr__' to represent the object as a string
     def __repr__(self):

@@ -1,8 +1,8 @@
-"""empty message
+"""Initial migration
 
-Revision ID: cb544f2aea96
+Revision ID: b5bf4ee38764
 Revises: 
-Create Date: 2024-04-01 17:59:51.028718
+Create Date: 2024-04-04 11:21:13.209280
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'cb544f2aea96'
+revision = 'b5bf4ee38764'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -21,7 +21,14 @@ def upgrade():
     op.create_table('cafes',
     sa.Column('cafe_id', sa.Integer(), nullable=False),
     sa.Column('name', sa.String(length=250), nullable=False),
-    sa.Column('location', sa.Text(), nullable=False),
+    sa.Column('location', sa.String(length=500), nullable=False),
+    sa.Column('image', sa.String(length=500), nullable=False),
+    sa.Column('opening_hour', sa.DateTime(), nullable=False),
+    sa.Column('closing_hour', sa.DateTime(), nullable=False),
+    sa.Column('wifi', sa.String(length=10), nullable=True),
+    sa.Column('noise', sa.String(length=10), nullable=True),
+    sa.Column('pet_friendly', sa.Boolean(), nullable=True),
+    sa.Column('electric_outlets', sa.Boolean(), nullable=True),
     sa.PrimaryKeyConstraint('cafe_id')
     )
     # ### end Alembic commands ###
