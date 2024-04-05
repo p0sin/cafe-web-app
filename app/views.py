@@ -52,7 +52,7 @@ def register_routes(app, db):
             
             cafe = Cafes(
                 name=request.form["name"],
-                image=request.form["image_url"],
+                image_url=request.form["image_url"],
                 map_url=map_url,
                 location=request.form["location"],
                 opening_hour=opening_hour,
