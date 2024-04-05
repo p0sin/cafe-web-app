@@ -9,8 +9,17 @@ def register_routes(app, db):
     @app.route('/')
     def index():
         cafes = Cafes.query.all()
-  
-        return render_template('index.html', cafes=cafes)
+
+        opening_hours = []
+        closing_hours = []
+
+        for cafe in cafes:
+            opening_hour = cafe.opening_hour.strftime("%H:%M")
+            closing_hour = cafe.closing_hour.strftime("%H:%M")
+            opening_hours.append(opening_hour)
+            closing_hours.append(closing_hour)
+
+        return render_template('index.html', cafes=cafes, opening_hours=opening_hours, closing_hours=closing_hours)
     
     @app.route('/add', methods=["GET", "POST"])
     def add():
@@ -44,7 +53,8 @@ def register_routes(app, db):
             cafe = Cafes(
                 name=request.form["name"],
                 image=request.form["image_url"],
-                location=map_url,
+                map_url=map_url,
+                location=request.form["location"],
                 opening_hour=opening_hour,
                 closing_hour=closing_hour,
                 wifi=request.form["wifi"],

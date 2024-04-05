@@ -7,6 +7,7 @@ class AddCafe(FlaskForm):
     name =  StringField('Name', validators=[DataRequired()])
     image_url = StringField('Image', validators=[DataRequired(), URL()])
     map_url = StringField('Google Maps Link', validators=[DataRequired(), URL()])
+    location = StringField('Location', validators=[DataRequired()])
     opening_hour = TimeField('Opening Hour')
     closing_hour = TimeField('Closing Hour')
     wifi = SelectField(u'Wifi Connection', choices=[('low', 'Low'), ('high', 'High')])

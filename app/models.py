@@ -9,8 +9,9 @@ class Cafes(db.Model):
     # Define columns for the 'cafes' table
     cafe_id = db.Column(db.Integer, primary_key=True)  # Primary key column for cafe ID
     name = db.Column(db.String(250), nullable=False)  # Column for cafe name (max length: 250 characters)
-    location = db.Column(db.String(500), nullable=False)     # Column for cafe location (text field)
-    image = db.Column(db.String(500), nullable=False)
+    map_url = db.Column(db.String(500), nullable=False)     # Column for cafe location (text field)
+    image_url = db.Column(db.String(500), nullable=False)
+    location = db.Column(db.String(250), nullable=False)
     opening_hour = db.Column(db.DateTime, nullable=False)
     closing_hour = db.Column(db.DateTime, nullable=False)
     wifi = db.Column(db.String(10))
